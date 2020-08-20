@@ -21,9 +21,12 @@ The student does not have to recreate more than 2 times the view-height of the s
     
 }
 
+
+
 .logoContainer{
     display: flex;
     align-items: stretch;
+    width: auto;
 }
 
 li, a {
@@ -31,7 +34,6 @@ li, a {
     font-size: 14px;
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: bold;
     line-height: 40px;
     letter-spacing: .025em;
 }
@@ -111,15 +113,17 @@ header{
 }
 
 .nav_links a{
-    padding: 0px 18px;
+    padding: 0px 15px;
     display: flex;
     align-items: center;
+    
    
     
 }
 
 #search{
     padding-right: 10px;
+    padding-left: 20px;
 }
 
 
@@ -129,12 +133,16 @@ header{
     background-color: #348DB9 ;
     border-right: 4px solid white;
     border-left: 4px solid white;
-    padding: 0px 40px;
+    padding: 0px 0px 0px 15px;
+    width: 200px
     
 }
 
 #blue:hover{
     background-color: #51ABD7 ;
+  
+   
+    
     
 }
 
@@ -142,10 +150,18 @@ header{
 #red{
     background-color: #E33E42;
     padding: 0px 40px;
+    
 }
 
 #red:hover{
     background-color: #ba1d22;
+}
+
+.red1{
+    width: 160px;
+}
+.blue1{
+    width: 200px;
 }
 
 /* Code for expandable search bar */
@@ -196,68 +212,6 @@ li:hover > .dropdown li{
     
 }
 
-.courses{
-    display:flex;
-    flex-direction: row;
-    line-height: 3;
-    font-size: 150%;
-    font-family: "Overpass", sans-serif;
-    font-weight: 400;
-    height: auto;
-    justify-content: space-evenly;
-    
-}
-
-.course{
-    display:flex;
-    flex-direction: row;
-    visibility: hidden;
-}
-
-   
-
-
-.course div{
-    background-color: #2D2D2D;
-    visibility: hidden;
-}
-
-.course:hover{
-    visibility: visible;
-}
-
-
-.col a{
-    padding: 0px 150px;
-    
-}
-
-
-.nav_links .title ul :hover{
-    background-color: black;
-}
-
-
-li> ul.courses{
-    visibility: hidden;
-    position:absolute;
-    display:flex;
-    left:-900px;
-    top:90%;
-    width: 200%;
-    
-}
-
-li:hover > .courses li{
-    visibility: visible;
-    background-color:#2D2D2D; 
-    height: 50px;
-    
-}
-
-.course{
-    visibility: visible;
-}
 
 .nav_links li ul li :hover{
     background-color: gray;
@@ -284,6 +238,92 @@ li> ul.dropdown{
     top:100%;
     width:30%;
 }
+
+
+.hidden ul li{
+    color:white;
+    background-color:black;
+    padding: 20px 20px;
+
+}
+
+
+.first > .hidden{
+    display: none;
+}
+.first:hover > .hidden {
+    display: block;
+    
+    
+}
+
+.hidden{
+    position: absolute;
+    top: 100%;
+    width: 85vw;
+    display: flex;
+    
+}
+
+.wrapper{
+    width: 100vw;
+}
+
+.hidden ul{
+    display: flex; 
+    flex-direction: row;
+    background-color:black;
+    justify-content: flex-start;
+    
+  
+    
+}
+
+.hidden ul li ul{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+
+    
+}
+
+.hidden ul li ul li{
+    padding: 0px;
+    height: 30px;
+    width: auto;
+}
+
+.second li ul li a{
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    width: auto;
+   
+    
+}
+
+.second li ul li a:hover{
+    background-color: black;
+    color: lightblue;
+    
+}
+
+.second li ul li :hover{
+    background-color: black;
+    color: lightblue;
+    
+}
+
+h3{
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.nav_links li .second li :hover{
+    background-color: black;
+}
+
+
 
 /* Title Page Styling */
 
@@ -475,7 +515,7 @@ img{
     padding-left: 20px;
 }
 
-h3{
+.column h3{
     color: #348DB9;
     font-size: 36px;
     font-family: "Overpass", sans-serif;
