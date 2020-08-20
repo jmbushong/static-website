@@ -1,0 +1,537 @@
+/* 
+
+Requirements:
+
+Choose from one of the provided websites.
+Use HTML5 & CSS to recreate the layout for the page as closely as possible
+Any buttons on the page must open to a blank tab.
+Any links referring another section on the page must go to that section.
+The finished project must be deployed  to Github Pages 
+The site must utilize animation if it is present on the page
+The site must utilize CSS Grid or Flexbox on at least one (1) section
+It does not need to be entirely responsive
+The student does not have to recreate more than 2 times the view-height of the scree*/
+
+/* NAVBAR STYLING */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+    
+}
+
+.logoContainer{
+    display: flex;
+    align-items: stretch;
+}
+
+li, a {
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: .025em;
+}
+
+.logoContainer a{
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 0px;
+    display: flex;
+    font-weight: normal;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2D2D2D;
+    align-items:stretch;  
+    height: 70px;
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    width: 70px;
+    
+}
+
+
+.logoContainer figure img {
+	opacity: 1;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.logoContainer figure:hover img {
+	opacity: .6;
+}
+
+
+
+
+.navbar{
+    display: block;
+    
+    
+}
+
+.nav_links{
+    display: flex;
+    list-style: none;
+    align-items: stretch;
+    height: 70px;
+    position: relative;
+}
+
+.nav_links li{
+    display: flex;
+    
+}
+
+.nav_links li :hover{
+    background-color: black;
+}
+
+.nav_links div li :hover{
+    background-color: #2D2D2D;
+}
+
+.nav_links div li input:hover{
+    background-color:white;
+}
+
+.nav_links a{
+    padding: 0px 18px;
+    display: flex;
+    align-items: center;
+   
+    
+}
+
+#search{
+    padding-right: 10px;
+}
+
+
+
+
+#blue {
+    background-color: #348DB9 ;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    padding: 0px 40px;
+    
+}
+
+#blue:hover{
+    background-color: #51ABD7 ;
+    
+}
+
+
+#red{
+    background-color: #E33E42;
+    padding: 0px 40px;
+}
+
+#red:hover{
+    background-color: #ba1d22;
+}
+
+/* Code for expandable search bar */
+input[type=text] {
+    width: 0px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: "Overpass", sans-serif;
+    background-color: white;
+    background-image: url('');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 0px 10px 0px;
+    margin-top:15px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 80%;
+  }
+
+  .search1{
+      display: flex;
+      flex-direction: row;
+  }
+
+  #companyName{
+      margin-left: 24px;
+  }
+
+/* Dropdown List ---I used this resource to come up with this idea. I then modified it to work for my static site: https://css-tricks.com/solved-with-css-dropdown-menus/*/
+
+li:hover > .dropdown li{
+    visibility: visible;
+    background-color:#2D2D2D; 
+    
+}
+
+.dropdown{
+    display:flex;
+    flex-direction: column;
+    line-height: 3;
+    font-size: 150%;
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    height: auto;
+    
+}
+
+.courses{
+    display:flex;
+    flex-direction: row;
+    line-height: 3;
+    font-size: 150%;
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    height: auto;
+    justify-content: space-evenly;
+    
+}
+
+.course{
+    display:flex;
+    flex-direction: row;
+    visibility: hidden;
+}
+
+   
+
+
+.course div{
+    background-color: #2D2D2D;
+    visibility: hidden;
+}
+
+.course:hover{
+    visibility: visible;
+}
+
+
+.col a{
+    padding: 0px 150px;
+    
+}
+
+
+.nav_links .title ul :hover{
+    background-color: black;
+}
+
+
+li> ul.courses{
+    visibility: hidden;
+    position:absolute;
+    display:flex;
+    left:-900px;
+    top:90%;
+    width: 200%;
+    
+}
+
+li:hover > .courses li{
+    visibility: visible;
+    background-color:#2D2D2D; 
+    height: 50px;
+    
+}
+
+.course{
+    visibility: visible;
+}
+
+.nav_links li ul li :hover{
+    background-color: gray;
+}
+
+.nav_links li ul li :hover{
+    width: 100%;
+}
+
+#apply{
+    background-color: #E33E42;
+    width: 100%;
+}
+
+#apply:hover{
+    background-color: #ba1d22;
+}
+
+li> ul.dropdown{
+    visibility: hidden;
+    position:absolute;
+    display:flex;
+    left:10;
+    top:100%;
+    width:30%;
+}
+
+/* Title Page Styling */
+
+.container2{
+    width: 100vw;
+    background-color: #EFEFEF;
+   
+    
+  
+}
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    
+    
+}
+
+
+.content{
+    position: absolute;
+    width: auto;
+    height: 50px;
+    top: 42%;
+    left: 24%;
+    letter-spacing: 150%;
+
+}
+
+
+
+
+section .content h1{
+    
+    color: #FFF;
+    background-color: #000000B3;
+    font-size: 55px;
+    font-family: 'Overpass', sans-serif;
+    padding: 13.75px 22px;
+    margin: 0px 0px 16.5px;
+    font-weight: 900;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 2px;
+    
+    
+    
+}
+
+.content a {
+    background-color: #E33E42;
+    margin: 0px 10px 7px 0px;
+    padding: 12.48px 20.8px 10.88px;
+    font-size: 32px;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.content a:hover{
+    background-color: #ba1d22;
+}
+
+.content3 .downArrow{
+    display:block;
+    background-color: transparent;
+    font-size: 70px;
+    
+}
+
+.content3{
+    width: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 90%;
+    left: 48%;
+    
+   
+}
+
+.fa-chevron-circle-down:hover{
+    color:#E33E42;
+}
+
+/* Course Info styling */
+
+.courseinfo{
+    background-color: #EFEFEF;
+    padding: 85px 0px;
+    margin: 0px;
+}
+.courseInfoContainer{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.title{
+    color: #348DB9;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Overpass', sans-serif;
+    margin: 0px 0px 12px;
+    text-align: center;
+    
+}
+
+.cardsFlex{
+    background-color:#EFEFEF;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.card-content{
+    background-color:white;
+    margin: 10px;
+    width: 380px;
+    font-family: "Overpass", sans-serif;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .001s ease- .02s;
+    
+
+}
+
+.card-content:hover{
+    background-color: rgba(103, 103, 103, 0.23);
+}
+
+
+.cardTitle{
+    font-size: 32px;
+    margin: 0px 0px 20.8px;
+    color: #2D2D2D;
+    padding: 19px 27.18px 0px; 
+}
+
+.card-content p{
+    font-size: 21px;
+    margin: 0px 0px 0px;
+    padding: 0px 27.18px 0px; 
+    color: #676767;
+
+}
+
+.card-content a{
+    background-color: #E33E42;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 10.5px 0px;
+    font-size: 21px;
+    
+}
+.card-content:hover a{
+    background-color: #ba1d22;
+}
+
+
+.button{
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+/* Styling for last section */
+.lastsection{
+    background-color: white;
+    height: 400px;
+    margin: 5% 24%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+img{
+    height: auto;
+    width: 200px;
+    
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+h3{
+    color: #348DB9;
+    font-size: 36px;
+    font-family: "Overpass", sans-serif;
+    margin: 0px 0px 23.4px;
+    letter-spacing: 1.8px;
+    line-height: 43.2px;
+}
+
+p{
+    font-size: 21px;
+    font-family: "Overpass", sans-serif;
+    color: #676767;
+    line-height: 31.5px;
+    letter-spacing: 0.525px;
+
+}
+
+/* Fake Website */
+
+.fakeSite{
+   
+    width: 100vw;
+    height: 50vh;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    font-size: 35px;
+    position: relative;
+    padding: 250px;
+    display: inline-block;
+}
+
+.fakeSite img{
+display: inline-block;
+position: relative;
+
+}
+
+
+
+.smiley{
+    background-color: #2D2D2D;
+    border: 2px solid black;
+    height: 500px;
+    padding: 50px 50px;
+}
+
+.fakeSite a{
+    color: white;
+    background-color: #348DB9;
+    font-size: 50px;
+    padding: 30px;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+}
+
+.fakeSite a:hover{
+    background-color: #E33E42;
+}
